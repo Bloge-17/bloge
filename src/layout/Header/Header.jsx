@@ -5,12 +5,21 @@ export const Header = () => {
     <>
       <header>
         <div className={style.container}>
+          <label>
+            <img
+              className={style.burger__menu}
+              src="./src/assets/images/svg/menu-burger.svg"
+              alt=""
+            />
+          </label>
           <div className={style.logo__name}>
             <p className={style.logo}>IT</p>
             <p className={style.name}>IT blog</p>
           </div>
           <div className={style.header__nav}>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">UI Design</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">
+              UI Design
+            </a>
             <a href="#">Front-end</a>
             <a href="#">Front-end</a>
             <select>
