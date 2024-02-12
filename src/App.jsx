@@ -17,12 +17,12 @@ const data = {
 
 
 
+
 function App() {
-
-  return <>
-    <Header />
-    <Card data={data } />
-  </>;
-}
-
+  return (
+    <>
+      <Header />
+      <Card data={data } />
+    </>
+  )
 export default App;
