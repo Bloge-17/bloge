@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "theme": "INTERNET",
+      "date": "June 28, 2021",
+      "heading": "How to design a product that can grow itself 10x in year",
+      "text": "Auctor Porta. Augue vitae diam mauris faucibus blandit elit per, feugiat leo dui orci. Etiam vestibulum. Nostra netus per conubia dolor.",
+      "author": {
+        "name": "Jenny Wilson",
+        "profession": "Product Designer",
+        "ava": "../../images/author.webp"
+      },
+      "image": "../../images/card-post.webp"
+    },
+    {
+      "theme": "9 TO 5",
+      "date": "June 22, 2021",
+      "heading": "The More Important the Work, the More Important the Rest",
+      "text": "Suitable Quality is determined by product users, clients or customers, not by society in general. For example, a low priced product may be viewed as having high.",
+      "author": {
+        "name": "Esther Howard",
+        "profession": "Entrepreneur",
+        "ava": "../../images/author.webp"
+      },
+      "image": "../../images/card-post.webp"
+    },
+    {
+      "theme": "INSPIRATIONS",
+      "date": "June 18, 2021",
+      "heading": "Email Love - Email Inspiration, Templates and Discovery",
+      "text": "Consider that for a moment: everything we see around us is assumed to have had a cause and is contingent upon something else.",
+      "author": {
+        "name": "Robert Fox",
+        "profession": "Front-end Engineer",
+        "ava": "../../images/author.webp"
+      },
+      "image": "../../images/card-post.webp"
+    }
+  ]
+}
