@@ -4,6 +4,8 @@
   display: flex;
   margin: 0 auto;
   margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .logo__name {
@@ -126,5 +128,58 @@
     opacity: 0.1;
     width: 14px;
     height: 14px;
+  }
+}
+
+.burger__menu {
+  display: none;
+}
+
+@media (max-width: 765px) {
+  .burger__menu {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .container {
+    max-width: 600px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .search {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__nav {
+    display: none;
+  }
+  .search {
+    width: max-content;
+    background: none;
+    margin-left: 0;
+    &__input {
+      display: none;
+    }
+  }
+
+  .burger__menu {
+    display: block;
+  }
+
+  .container {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
   }
 }
