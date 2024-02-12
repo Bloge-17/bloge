@@ -1,14 +1,11 @@
-
-import './App.scss'
-import { Card } from './layout/components/Card/Card'
+import "./App.scss";
+import { Header } from "./layout/Header/Header";
 
 function App() {
-  
-  return (
-    <>
-    <Card />
-    </>
-  )
+
+  return <>
+  <Header/>
+  </>;
 }
 
-export default App
+export default App;
