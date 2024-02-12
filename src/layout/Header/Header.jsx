@@ -10,7 +10,7 @@ export const Header = () => {
             <p className={style.name}>IT blog</p>
           </div>
           <div className={style.header__nav}>
-            <a href="#">UI Design</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">UI Design</a>
             <a href="#">Front-end</a>
             <a href="#">Front-end</a>
             <select>
@@ -20,8 +20,20 @@ export const Header = () => {
               <option value="">4</option>
             </select>
           </div>
-          <div className="search">
-            <img src="./src/assets/images/svg/search.svg" alt="" />
+          <div className={style.search}>
+            <img
+              className={style.search__svg}
+              src="./src/assets/images/svg/search.svg"
+              alt=""
+            />
+
+            <form onChange={(e) => e.preventDefault()} action="">
+              <input
+                className={style.search__input}
+                type="text"
+                placeholder="Search"
+              />
+            </form>
           </div>
         </div>
       </header>
