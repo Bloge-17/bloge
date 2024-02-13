@@ -8,6 +8,24 @@ display: inline-block;
 
 }
 
+.last-post{
+  width: 100%;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 4;
+ gap: 31px;
+ max-height: 389px;
+ order: -1;
+
+ &__img{
+   object-fit: cover;
+    object-position: center;
+    max-width: 710px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+ }
+}
+
 .post{
   max-width: 340px;
 
