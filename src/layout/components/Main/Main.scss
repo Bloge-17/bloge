@@ -1,11 +1,17 @@
-main{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
-  
-  max-width: 1080px;
+.main{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container {
+  max-width: 80%;
+  flex-wrap: wrap;
+  display: flex;
   margin: 0 auto;
-  column-gap: 30px;
-  row-gap: 63px;
-  margin-top: 62px;
-  height: max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
 }

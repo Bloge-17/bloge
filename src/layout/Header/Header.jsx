@@ -12,10 +12,10 @@ export const Header = () => {
               alt=""
             />
           </label>
-          <div className={style.logo__name}>
+          <a href="#" className={style.logo__name}>
             <p className={style.logo}>IT</p>
             <p className={style.name}>IT blog</p>
-          </div>
+          </a>
           <div className={style.header__nav}>
             <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">
               UI Design

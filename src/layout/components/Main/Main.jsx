@@ -1,6 +1,10 @@
 import React from "react";
-import "./Main.scss";
+import style from "./Main.scss";
 
 export const Main = ({ cards }) => {
-  return <main>{cards}</main>;
+  return (
+    <main className={style.main}>
+      <div className={style.container}>{cards}</div>
+    </main>
+  );
 };
