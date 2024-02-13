@@ -1,10 +1,6 @@
-import React from 'react'
-import "./Main.scss"
+import React from "react";
+import "./Main.scss";
 
-export const Main = ({cards}) => {
-  return (
-  <main>
-      {cards}
-    </main>
-  )
-}
+export const Main = ({ cards }) => {
+  return <main>{cards}</main>;
+};
