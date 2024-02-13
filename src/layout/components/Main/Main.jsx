@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Main.scss";
+import style from "./Main.module.scss";
 
 export const Main = ({ cards }) => {
   return (
