@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import style from "./Header.module.scss";
+import { SearchContext } from "../../providers/context/SearchContext";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
+  const { searchResults, changeValue } = useContext(SearchContext);
+
   return (
     <>
       <header>
@@ -36,8 +41,15 @@ export const Header = () => {
               alt=""
             />
 
-            <form onChange={(e) => e.preventDefault()} action="">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                searchResults();
+              }}
+              action=""
+            >
               <input
+                onChange={changeValue}
                 className={style.search__input}
                 type="text"
                 placeholder="Search"
