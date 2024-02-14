@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import style from "./Header.module.scss";
+import { SearchContext } from "../../providers/context/SearchContext";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [focus, setFocus] = useState(true);
   const [burger, setBurger] = useState(true);
+  const { searchResults, changeValue } = useContext(SearchContext);
 
   return (
     <>
