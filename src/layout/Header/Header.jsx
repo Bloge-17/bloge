@@ -1,10 +1,19 @@
 import { useContext } from "react";
 import style from "./Header.module.scss";
 import { SearchContext } from "../../providers/context/SearchContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { NavLink } from "../../components/NavLink/NavLink";
+
 
 export const Header = () => {
-  const { searchResults, changeValue } = useContext(SearchContext);
+  const {
+    searchResults,
+    changeValue,
+  } = useContext(SearchContext);
+  const navigate = useNavigate();
+  const navArr = ["UI Design", "Front-end", "Back-end"];
+
+
 
   return (
     <>
@@ -17,16 +26,16 @@ export const Header = () => {
               alt=""
             />
           </label>
-          <div className={style.logo__name}>
-            <p className={style.logo}>IT</p>
-            <p className={style.name}>IT blog</p>
-          </div>
+          <Link to="/">
+            <div className={style.logo__name}>
+              <p className={style.logo}>IT</p>
+              <p className={style.name}>IT blog</p>
+            </div>
+          </Link>
           <div className={style.header__nav}>
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">
-              UI Design
-            </a>
-            <a href="#">Front-end</a>
-            <a href="#">Front-end</a>
+            <NavLink text={navArr[0]} />
+            <NavLink text={navArr[1]} />
+            <NavLink text={navArr[2]} />
             <select>
               <option value="">Lainnya</option>
               <option value="">2</option>
@@ -44,12 +53,17 @@ export const Header = () => {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                searchResults();
+                navigate("search");
+               searchResults();
+               
+               
               }}
               action=""
             >
               <input
                 onChange={changeValue}
+                
+                // value={searchParams.get('page')}
                 className={style.search__input}
                 type="text"
                 placeholder="Search"

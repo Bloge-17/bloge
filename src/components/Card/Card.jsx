@@ -30,7 +30,7 @@ let arrMonth = [
 
   return (
    
-    <article className={stamp===lastPost ? "last-post" : "post"}  >
+    <article className={stamp===lastPost ? "last__post" : "post"}  >
       <img className={stamp===lastPost ? "last__img" : "post__img"} src={image} alt="pic" />
       <div className="post__content">
         <p className="post__theme">{theme}</p>

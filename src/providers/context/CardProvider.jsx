@@ -9,7 +9,9 @@ export const CardProvider = ({ children }) => {
   useEffect(() => {
     async function renderCards() {
       try {
-        const response = await fetch("http://localhost:3000/cards");
+        const response = await fetch(
+          "http://localhost:3000/cards"
+        );
 
         if (response.ok) {
           const arr = await response.json();
@@ -34,7 +36,7 @@ export const CardProvider = ({ children }) => {
   let lastPost = getMaxOfArray() // находим дату последнего поста
 
 
-  let cards = data.map((el,index) => <Card {...el} lastPost={lastPost} key={index} />); // мапаем карточки
+  let cards = data.map((el) => <Card {...el} lastPost={lastPost} key={el.id} />); // мапаем карточки
 
 
   return (

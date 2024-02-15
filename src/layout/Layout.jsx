@@ -1,11 +1,23 @@
 import React from 'react'
 import { Header } from './Header/Header'
+import { Outlet } from 'react-router-dom';
+import { SearchProvider } from '../providers/context/SearchProvider';
+import { CardProvider } from '../providers/context/CardProvider';
 
-export const Layout = ({children}) => {
+
+export const Layout = ({ children }) => {
+ 
+
   return (
+    
+     
     <>
-      
-      <main>{ children}</main>
-    </>
-  )
+      <SearchProvider>
+        <CardProvider>
+      <Header />
+      <Outlet />
+       </CardProvider>   
+       </SearchProvider>
+   </>
+  );
 }
