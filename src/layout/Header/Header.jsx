@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   const [focus, setFocus] = useState(true);
   const [burger, setBurger] = useState(true);
-  const { searchResults, changeValue } = useContext(SearchContext);
+  const [searchResults, changeValue] = useState(SearchContext);
 
   return (
     <>
@@ -26,9 +26,9 @@ export const Header = () => {
             <img
               className={style.burger__menu}
               src={
-                !burger
-                  ? "https://icons.iconarchive.com/icons/custom-icon-design/mono-general-1/128/close-icon.png"
-                  : "./src/assets/images/svg/menu-burger.svg"
+                burger
+                  ? "/images/svg/menu-burger.svg"
+                  : "https://icons.iconarchive.com/icons/custom-icon-design/mono-general-1/128/close-icon.png"
               }
               alt=""
               width={24}
@@ -45,10 +45,11 @@ export const Header = () => {
             }
             className={style.logo__name}
           >
-            <p className={style.logo}>IT</p>
-            <p className={style.name}>IT blog</p>
+            <Link className={style.Link} to="/">
+              <p className={style.logo}>IT</p>
+              <p className={style.name}>IT blog</p>
+            </Link>
           </div>
-
           <div
             style={!burger ? { transform: "translateX(1%)" } : null}
             className={style.header__nav}
@@ -84,4 +85,4 @@ export const Header = () => {
       </header>
     </>
   );
-  }
+};

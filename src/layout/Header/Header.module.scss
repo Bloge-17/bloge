@@ -4,8 +4,8 @@
   display: flex;
   margin: 0 auto;
   margin-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   height: 35px;
 }
 
@@ -14,6 +14,7 @@
 }
 
 .logo__name {
+  cursor: pointer;
   display: flex;
   gap: 10px;
   text-align: center;
@@ -170,7 +171,7 @@
   .header__nav {
     position: absolute;
     flex-direction: column;
-    background: rgb(51, 54, 101);
+    background: linear-gradient(180deg, rgb(55, 65, 81), rgb(17, 24, 39) 100%);
     top: 0;
     left: -80px;
     transition: 1s;
@@ -212,7 +213,7 @@
       width: 30px;
       height: 30px;
       margin-left: 0;
-      
+
       z-index: 100;
       opacity: 0;
       height: 40px;
@@ -244,7 +245,12 @@
 
 a {
   text-decoration: none;
-  &:active{
+  &:active {
     text-decoration: none;
   }
+}
+
+
+.Link {
+  display:contents;
 }
