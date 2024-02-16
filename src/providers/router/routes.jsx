@@ -7,6 +7,7 @@ import { FrontEnd } from "../../Pages/Front-End/FrontEnd";
 import { BackEnd } from "../../Pages/Back-End/BackEnd";
 import { CardPage } from "../../Pages/CardPage/CardPage";
 import style from "./router.module.scss";
+import { ErorPage } from "../../Pages/ErorPage/ErorPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,16 +23,20 @@ export const router = createBrowserRouter([
         element: <SearchPage />,
       },
       {
-        path: "/Ui Design",
+        path: "/ui-design",
         element: <UiDesign />,
       },
       {
-        path: "/Front-End",
+        path: "/front-end",
         element: <FrontEnd />,
       },
       {
-        path: "Back-end",
+        path: "/back-end",
         element: <BackEnd />,
+      },
+      {
+        path: "/*",
+        element: <ErorPage />,
       },
       {
         path: "/:theme/:postName",
