@@ -13,7 +13,7 @@ export const BackEnd = () => {
     async function renderCards() {
       try {
         const response = await fetch(
-          "http://localhost:3000/cards?theme=Back-end"
+          "http://localhost:3000/cards?theme=Back-end",
         );
 
         if (response.ok) {

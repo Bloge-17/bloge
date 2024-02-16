@@ -7,15 +7,11 @@ export const SearchPage = () => {
   const { inputValue, data, searchParams } = useContext(SearchContext);
 
   let cards = data
-    .filter(
-      (el) =>
-        el.heading.toLowerCase().includes(searchParams.get("s").toLowerCase())  
+    .filter((el) =>
+      el.heading.toLowerCase().includes(searchParams.get("s").toLowerCase()),
     )
     .map((el) => <Card {...el} key={el.id} />);
 
-  
-    
-  
   return (
     <>
       <h2 className="search-heading">Search: {inputValue}</h2>

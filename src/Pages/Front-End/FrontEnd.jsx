@@ -11,7 +11,7 @@ export const FrontEnd = () => {
     async function renderCards() {
       try {
         const response = await fetch(
-          "http://localhost:3000/cards?theme=Front-end"
+          "http://localhost:3000/cards?theme=Front-end",
         );
         if (response.ok) {
           const arr = await response.json();

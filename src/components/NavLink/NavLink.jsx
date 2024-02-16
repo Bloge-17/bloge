@@ -1,12 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { SearchContext } from "../../providers/context/SearchContext";
-import { useContext } from 'react';
+import { useContext } from "react";
 
-
-export const NavLink = ({ text}) => {
+export const NavLink = ({ text }) => {
   const { clickNav } = useContext(SearchContext);
-
 
   return (
     <Link
@@ -18,4 +16,4 @@ export const NavLink = ({ text}) => {
       {text}
     </Link>
   );
-}
+};

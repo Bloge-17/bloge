@@ -3,6 +3,7 @@ import style from "./Header.module.scss";
 import { SearchContext } from "../../providers/context/SearchContext";
 import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "../../components/NavLink/NavLink";
+import { useContext } from "react";
 
 export const Header = () => {
   const { searchResults, changeValue } = useContext(SearchContext);

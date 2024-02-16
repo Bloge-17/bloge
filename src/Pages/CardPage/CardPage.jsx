@@ -54,14 +54,15 @@ export const CardPage = () => {
 
   return (
     <>
-      {isLoading ? 
-      <article>
-        <div className={style.themeSkel}></div>
-        <div className={style.headingSkel}></div>
-        <div className={style.authorSkel}></div>
-        <div className={style.imgSkel}></div>
-        <div className={style.textSkel}></div>
-      </article> : (
+      {isLoading ? (
+        <article>
+          <div className={style.themeSkel}></div>
+          <div className={style.headingSkel}></div>
+          <div className={style.authorSkel}></div>
+          <div className={style.imgSkel}></div>
+          <div className={style.textSkel}></div>
+        </article>
+      ) : (
         <article className={style.post}>
           <div className={style.date__theme}>
             <p className={style.post__date}>

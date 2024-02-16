@@ -2,20 +2,15 @@ import React, { useState, useEffect } from "react";
 import { SearchContext } from "./SearchContext";
 import { useSearchParams } from "react-router-dom";
 
-
 export const SearchProvider = ({ children }) => {
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
 
-
-
   useEffect(() => {
     async function renderCards() {
       try {
-        const response = await fetch(
-          "http://localhost:3000/cards"
-        );
+        const response = await fetch("http://localhost:3000/cards");
 
         if (response.ok) {
           const arr = await response.json();
@@ -30,41 +25,31 @@ export const SearchProvider = ({ children }) => {
     renderCards();
   }, []);
 
-
- 
-
-// console.log(searchParams, inputValue)
-  
+  // console.log(searchParams, inputValue)
 
   function changeValue(e) {
-    setInputValue(e.target.value)
-    
+    setInputValue(e.target.value);
   }
 
-  function clickNav(value) {// поиск по навигации из хэдэра
+  function clickNav(value) {
+    // поиск по навигации из хэдэра
     setInputValue(value);
-    
   }
 
-
-  
-  
   function searchResults() {
-    setSearchParams({ s: inputValue })
-    }
-      
-    
- 
+    setSearchParams({ s: inputValue });
+  }
+
   return (
     <SearchContext.Provider
-      value={{ 
+      value={{
         changeValue,
         inputValue,
-          clickNav,
+        clickNav,
         searchResults,
         searchParams,
         setInputValue,
-       setSearchParams,
+        setSearchParams,
         data,
       }}
     >
