@@ -9,10 +9,11 @@ function App() {
 
   return (
     <>
-      
+      <SearchProvider>
+        <CardProvider>
           <RouterProvider router={router} />
-     
-     
+        </CardProvider>
+      </SearchProvider>
     </>
   );
 }
