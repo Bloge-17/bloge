@@ -6,4 +6,5 @@ export const Main = () => {
   const { cards } = useContext(CardContext);
 
   return <div className={style.container}>{cards}</div>;
+
 };

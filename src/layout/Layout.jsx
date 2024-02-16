@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { SearchProvider } from "../providers/context/SearchProvider";
 import { CardProvider } from "../providers/context/CardProvider";
 
+
 export const Layout = ({ children }) => {
   return (
     <>

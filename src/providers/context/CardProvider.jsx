@@ -6,6 +6,7 @@ import { Card } from "../../components/Card/Card";
 export const CardProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
+
   useEffect(() => {
     async function renderCards() {
       try {
