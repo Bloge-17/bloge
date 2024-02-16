@@ -2,6 +2,7 @@ import { Card } from "../../components/Card/Card";
 import { useState, useEffect } from "react";
 import { SearchContext } from "../../providers/context/SearchContext";
 import { useContext } from "react";
+import style from "../../components/Main/Main.module.scss";
 
 export const FrontEnd = () => {
   const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ export const FrontEnd = () => {
   return (
     <>
       <h2 className="search-heading">Search: {inputValue}</h2>
-      <main>
+      <div className={style.container}>
         {cards.length === 0 ? (
           <div className="noResult">
             <h3 className="noResult__head">No result 😥</h3>
@@ -43,7 +44,7 @@ export const FrontEnd = () => {
         ) : (
           cards
         )}
-      </main>
+      </div>
     </>
   );
 };

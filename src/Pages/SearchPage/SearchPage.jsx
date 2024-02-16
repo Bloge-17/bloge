@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./SearchPagee.scss";
 import { SearchContext } from "../../providers/context/SearchContext";
 import { Card } from "../../components/Card/Card";
+import style from "../../components/Main/Main.module.scss";
+
 
 export const SearchPage = () => {
   const { inputValue, data, searchParams } = useContext(SearchContext);
@@ -15,7 +17,7 @@ export const SearchPage = () => {
   return (
     <>
       <h2 className="search-heading">Search: {inputValue}</h2>
-      <main>
+      <div className={style.container}>
         {cards.length === 0 ? (
           <div className="noResult">
             <h3 className="noResult__head">No result 😥</h3>
@@ -27,7 +29,7 @@ export const SearchPage = () => {
         ) : (
           cards
         )}
-      </main>
+      </div>
     </>
   );
 };
