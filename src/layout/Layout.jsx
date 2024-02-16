@@ -1,11 +1,14 @@
-import React from 'react'
-import { Header } from './Header/Header'
+import React from "react";
+import { Header } from "./Header/Header";
+import { Footer } from "./Fotter/Footer";
+import style from "./Layout.module.scss";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <>
-      
-      <main>{ children}</main>
+      <Header />
+      <main className={style.main}>{children}</main>
+      <Footer />
     </>
-  )
-}
+  );
+};

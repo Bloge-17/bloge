@@ -1,29 +1,61 @@
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 import style from "./Header.module.scss";
 import { SearchContext } from "../../providers/context/SearchContext";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const { searchResults, changeValue } = useContext(SearchContext);
+  const [focus, setFocus] = useState(true);
+  const [burger, setBurger] = useState(true);
+  const [searchResults, changeValue] = useState(SearchContext);
 
   return (
     <>
       <header>
         <div className={style.container}>
-          <label>
+          <label
+            style={focus ? { zIndex: "101" } : { zIndex: 1 }}
+            className={style.burger__label}
+          >
+            <input
+              onChange={() => {
+                burger ? setBurger(false) : setBurger(true);
+              }}
+              className={style.burger__checkbox}
+              type="checkbox"
+            />
             <img
               className={style.burger__menu}
-              src="./src/assets/images/svg/menu-burger.svg"
+              src={
+                burger
+                  ? "/images/svg/menu-burger.svg"
+                  : "https://icons.iconarchive.com/icons/custom-icon-design/mono-general-1/128/close-icon.png"
+              }
               alt=""
+              width={24}
+              height={24}
             />
           </label>
-          <div className={style.logo__name}>
-            <p className={style.logo}>IT</p>
-            <p className={style.name}>IT blog</p>
+          <div
+            style={
+              window.innerWidth <= 518
+                ? !focus
+                  ? { display: "none" }
+                  : null
+                : null
+            }
+            className={style.logo__name}
+          >
+            <Link className={style.Link} to="/">
+              <p className={style.logo}>IT</p>
+              <p className={style.name}>IT blog</p>
+            </Link>
           </div>
-          <div className={style.header__nav}>
+          <div
+            style={!burger ? { transform: "translateX(1%)" } : null}
+            className={style.header__nav}
+          >
             <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">
-              UI Design
+              not RickRoll
             </a>
             <a href="#">Front-end</a>
             <a href="#">Front-end</a>
@@ -35,21 +67,14 @@ export const Header = () => {
             </select>
           </div>
           <div className={style.search}>
-            <img
-              className={style.search__svg}
-              src="./src/assets/images/svg/search.svg"
-              alt=""
-            />
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                searchResults();
-              }}
-              action=""
-            >
+            <form onChange={(e) => e.preventDefault()} action="">
               <input
-                onChange={changeValue}
+                onFocus={() => {
+                  setFocus(false);
+                }}
+                onBlur={() => {
+                  setFocus(true);
+                }}
                 className={style.search__input}
                 type="text"
                 placeholder="Search"

@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
-import "./Main.scss";
+import style from "./Main.module.scss";
 import { CardContext } from "../../providers/context/CardContext";
-import {Link} from "react-router-dom"
+import { Layout } from "../../layout/Layout";
 
 export const Main = () => {
-  
   const { cards } = useContext(CardContext);
   return (
-    <>
-      <main>{cards}</main>
-    </>)
+    <Layout>
+      <div className={style.container}>
+        {cards}
+      </div>
+    </Layout>
+  );
 };

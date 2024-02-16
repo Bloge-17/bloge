@@ -6,6 +6,7 @@ import { Card } from "../../components/Card/Card";
 export const CardProvider = ({ children }) => {
   const [data, setData] = useState([]);
 
+
   useEffect(() => {
     async function renderCards() {
       try {
@@ -24,18 +25,16 @@ export const CardProvider = ({ children }) => {
     renderCards();
   }, []);
 
-  
+  let lastDate = data.map((el) => +new Date(el.date));
+  function getMaxOfArray() {
+    return Math.max.apply(null, lastDate);
+  }
 
-  let lastDate = data.map((el) => +(new Date((el.date))))
- function getMaxOfArray() {
-   return Math.max.apply(null, lastDate);
- }
+  let lastPost = getMaxOfArray(); // находим дату последнего поста
 
-  let lastPost = getMaxOfArray() // находим дату последнего поста
-
-
-  let cards = data.map((el,index) => <Card {...el} lastPost={lastPost} key={index} />); // мапаем карточки
-
+  let cards = data.map((el, index) => (
+    <Card {...el} lastPost={lastPost} key={index} />
+  )); // мапаем карточки
 
   return (
     <CardContext.Provider value={{ cards }}>{children}</CardContext.Provider>

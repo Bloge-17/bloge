@@ -1,0 +1,147 @@
+.post {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  text-align: center;
+  margin-top: 77px;
+
+  .date__theme {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 28px;
+  }
+
+  &__theme {
+    color: rgb(255, 255, 255);
+    font-family: Patrick Hand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: inline-block;
+  }
+
+  &__date {
+    color: rgb(255, 255, 255);
+    font-family: Patrick Hand;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: inline;
+  }
+
+  &__heading {
+    color: rgb(255, 255, 255);
+    font-family: Patrick Hand;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 11px;
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Patrick Hand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  &__ava {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  &__avtor {
+    color: rgb(255, 255, 255);
+    font-family: Patrick Hand;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  &__profession {
+    color: rgb(255, 255, 255);
+    font-family: Patrick Hand;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  &__author {
+    display: flex;
+    gap: 16px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+.themeSkel {
+  max-width: 200px;
+  height: 30px;
+  background: grey;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.headingSkel {
+  max-width: 500px;
+  height: 60px;
+  background: grey;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.authorSkel {
+  max-width: 200px;
+  height: 50px;
+  background-color: grey;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.imgSkel {
+  max-width: 890px;
+  height: 590px;
+  background: grey;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 50px;
+}
+
+.textSkel {
+  max-width: 700px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: grey;
+  border-radius: 5px;
+}
