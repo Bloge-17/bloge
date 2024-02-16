@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { SearchContext } from './SearchContext';
-import { Card } from '../../components/Card/Card';
+import React, { useState, useEffect } from "react";
+import { SearchContext } from "./SearchContext";
+import { useSearchParams } from "react-router-dom";
 
 export const SearchProvider = ({ children }) => {
-  
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState([]);
-  const [results,setResult] = useState([])
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     async function renderCards() {
@@ -25,26 +24,36 @@ export const SearchProvider = ({ children }) => {
     }
     renderCards();
   }, []);
- 
-  
+
+  // console.log(searchParams, inputValue)
+
   function changeValue(e) {
-    setInputValue(e.target.value)
-   
+    setInputValue(e.target.value);
   }
 
+  function clickNav(value) {
+    // поиск по навигации из хэдэра
+    setInputValue(value);
+  }
 
-  let searchResults = () => { 
-  setResult(data
-      .filter((el) => el.heading.toLowerCase().includes(inputValue.toLowerCase()))
-    .map((el, index) => <Card {...el} key={index} />))
-    
-};
-
-  
+  function searchResults() {
+    setSearchParams({ s: inputValue });
+  }
 
   return (
-    <SearchContext.Provider value={{ searchResults, changeValue,results }}>
+    <SearchContext.Provider
+      value={{
+        changeValue,
+        inputValue,
+        clickNav,
+        searchResults,
+        searchParams,
+        setInputValue,
+        setSearchParams,
+        data,
+      }}
+    >
       {children}
     </SearchContext.Provider>
   );
-}
+};

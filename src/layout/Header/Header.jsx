@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
 import style from "./Header.module.scss";
 import { SearchContext } from "../../providers/context/SearchContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { NavLink } from "../../components/NavLink/NavLink";
+import { useContext } from "react";
 
 export const Header = () => {
+  const { searchResults, changeValue } = useContext(SearchContext);
+  const navigate = useNavigate();
+  const navArr = ["UI Design", "Front-end", "Back-end"];
+
   const [focus, setFocus] = useState(true);
   const [burger, setBurger] = useState(true);
-  const [searchResults, changeValue] = useState(SearchContext);
 
   return (
     <>
@@ -54,11 +59,9 @@ export const Header = () => {
             style={!burger ? { transform: "translateX(1%)" } : null}
             className={style.header__nav}
           >
-            <a href="https://youtu.be/dQw4w9WgXcQ?si=rA7bL7GAecGxV-TZ">
-              not RickRoll
-            </a>
-            <a href="#">Front-end</a>
-            <a href="#">Front-end</a>
+            <NavLink text={navArr[0]} />
+            <NavLink text={navArr[1]} />
+            <NavLink text={navArr[2]} />
             <select>
               <option value="">Lainnya</option>
               <option value="">2</option>
@@ -67,8 +70,21 @@ export const Header = () => {
             </select>
           </div>
           <div className={style.search}>
-            <form onChange={(e) => e.preventDefault()} action="">
+            <img
+              className={style.search__svg}
+              src="./src/assets/images/svg/search.svg"
+              alt=""
+            />
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate("search");
+                searchResults();
+              }}
+              action=""
+            >
               <input
+                onChange={changeValue}
                 onFocus={() => {
                   setFocus(false);
                 }}

@@ -9,7 +9,8 @@
     "dev": "concurrently \"vite\" \"json-server db.json\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.23",
@@ -27,6 +28,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "^3.2.5",
     "sass": "^1.70.0",
     "scss": "^0.2.4",
     "vite": "^5.1.0"

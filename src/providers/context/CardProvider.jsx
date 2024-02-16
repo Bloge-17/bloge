@@ -32,8 +32,8 @@ export const CardProvider = ({ children }) => {
 
   let lastPost = getMaxOfArray(); // находим дату последнего поста
 
-  let cards = data.map((el, index) => (
-    <Card {...el} lastPost={lastPost} key={index} />
+  let cards = data.map((el) => (
+    <Card {...el} lastPost={lastPost} key={el.id} />
   )); // мапаем карточки
 
   return (

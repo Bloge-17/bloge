@@ -1,22 +1,21 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.scss";
 
-import React from "react"; 
+import React from "react";
 let arrMonth = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 export const Card = ({
   image,
@@ -28,7 +27,6 @@ export const Card = ({
   lastPost,
   id,
 }) => {
- 
   let d = new Date(date);
   let month = arrMonth[d.getMonth()];
   let day = d.getDate();

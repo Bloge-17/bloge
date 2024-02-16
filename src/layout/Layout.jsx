@@ -1,14 +1,19 @@
 import React from "react";
 import { Header } from "./Header/Header";
-import { Footer } from "./Fotter/Footer";
-import style from "./Layout.module.scss";
+import { Outlet } from "react-router-dom";
+import { SearchProvider } from "../providers/context/SearchProvider";
+import { CardProvider } from "../providers/context/CardProvider";
+
 
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header />
-      <main className={style.main}>{children}</main>
-      <Footer />
+      <SearchProvider>
+        <CardProvider>
+          <Header />
+          <Outlet />
+        </CardProvider>
+      </SearchProvider>
     </>
   );
 };
