@@ -5,13 +5,16 @@ import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "../../components/NavLink/NavLink";
 import { useContext } from "react";
 
-export const Header = () => {
+
+export const Header = ({ setIsOpen, CreatePortal }) => {
   const { searchResults, changeValue } = useContext(SearchContext);
   const navigate = useNavigate();
   const navArr = ["UI Design", "Front-end", "Back-end"];
 
   const [focus, setFocus] = useState(true);
   const [burger, setBurger] = useState(true);
+
+ 
 
   return (
     <>
@@ -68,6 +71,14 @@ export const Header = () => {
               <option value="">3</option>
               <option value="">4</option>
             </select>
+            <button
+              onClick={() => {
+                setIsOpen(true);
+                CreatePortal();
+              }}
+            >
+              Create post
+            </button>
           </div>
           <div className={style.search}>
             <img
