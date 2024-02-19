@@ -10,7 +10,8 @@
         "profession": "Product Designer",
         "ava": "../src/images/author.webp"
       },
-      "image": "../src/images/card-post.webp"
+      "image": "../src/images/card-post.webp",
+      "id": "f171"
     },
     {
       "theme": "9 TO 5",
@@ -22,7 +23,8 @@
         "profession": "Entrepreneur",
         "ava": "../src/images/author-3.webp"
       },
-      "image": "../src/images/image-3.webp"
+      "image": "../src/images/image-3.webp",
+      "id": "988c"
     },
     {
       "theme": "INSPIRATIONS",
@@ -34,7 +36,8 @@
         "profession": "Front-end Engineer",
         "ava": "../src/images/author-4.webp"
       },
-      "image": "../src/images/image-4.webp"
+      "image": "../src/images/image-4.webp",
+      "id": "304a"
     },
     {
       "theme": "9 TO 5",
@@ -46,7 +49,8 @@
         "profession": "Entrepreneur",
         "ava": "../src/images/author-3.webp"
       },
-      "image": "../src/images/image-5.webp"
+      "image": "../src/images/image-5.webp",
+      "id": "dec2"
     },
     {
       "theme": "INSPIRATIONS",
@@ -58,7 +62,8 @@
         "profession": "Front-end Engineer",
         "ava": "../src/images/author-4.webp"
       },
-      "image": "../src/images/image-6.webp"
+      "image": "../src/images/image-6.webp",
+      "id": "10c4"
     },
     {
       "theme": "INTERNET",
@@ -70,7 +75,8 @@
         "profession": "Product Designer",
         "ava": "../src/images/author.webp"
       },
-      "image": "../src/images/image-7.webp"
+      "image": "../src/images/image-7.webp",
+      "id": "c566"
     },
     {
       "theme": "UI DESIGN",
@@ -82,7 +88,9 @@
         "profession": "UI Designer",
         "ava": "../src/images/author-big.webp"
       },
-      "image": "../src/images/image-big.webp"
+      "image": "../src/images/image-big.webp",
+      "id": "144e"
     }
+    
   ]
 }
